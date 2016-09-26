@@ -260,7 +260,7 @@ $(document).ready(function() {
                         }
                     else if (rawData[line][3].match(/[a-z]/i))
                         {
-                            imgURL = '<img src= "sbp-news-scroller/' + rawData[line][3] + '" alt="' + rawData[line][4] +
+                            imgURL = '<img src= "SBP-news-scroller/' + rawData[line][3] + '" alt="' + rawData[line][4] +
                             '" class="' + slideImageClass.substring(1) + '">'
                         }
                     else
