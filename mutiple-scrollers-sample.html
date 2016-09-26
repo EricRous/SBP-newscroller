@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Eric Rousey News Scroller Demo</title>
+
+        <!--W3 stylesheet-->
+        <link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet">
+
+        <!--JQuery-->
+	<script type="text/javascript" src="SBP-news-scroller/jquery-1.12.4.min.js"></script>
+
+    </head>
+
+  <body class="container-center">
+
+    <!--News Scrollers-->
+    <script type="text/javascript" src="SBP-news-scroller/SBPnewsscroller.js"></script>
+    <script>SBPnewsscroller("scroller1", "800px", "450px", 7, "sample-database.txt", "75%", "2em", "1em");</script>
+
+    <div class="scroller1">
+    </div>
+
+    <script>SBPnewsscroller("scroller2", "400px", "350px", 5, "sample-database2.txt", "75%", "2em", "1em", "NOBUTTONS");</script>
+
+    <div class="scroller2">
+    </div>
+
+  </body>
+</html>
+
+

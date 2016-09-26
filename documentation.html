@@ -1,0 +1,237 @@
+<html>
+<head>
+<title>SBP News Scroller</title>
+<link rel="stylesheet" href="basic.css">
+<script type="text/javascript" src="SBP-news-scroller/jquery-1.12.4.min.js"></script>
+</head>
+<body onload="SBTresponsive()" onresize="SBTresponsive()">
+<h1 align="center">SBP News Scroller</h1>
+<h2 align="center" class="grayText">simple but powerful...</h2>
+<p></p>
+<h2 align="center">Solutions by Pallmorsoft</h2>
+<p align="center"><i>Created by Eric Rousey</i></p>
+<hr><hr>
+    <script type="text/javascript" src="SBP-news-scroller/SBPnewsscroller.js"></script>
+    <script>
+        var initialSetup = 0;
+        function SBTresponsive()
+            {
+                if (initialSetup === 0)
+                    {
+                        if ($(window).width() > 700)
+                            {
+                                SBPnewsscroller("scroller1", "625px", "450px", 7, "sample-database3.txt", "75%", "1.3em", "1em", "allbuttons");
+                                initialSetup = 1;
+                            }
+                        else if ($(window).width() > 400)
+                            {
+                                SBPnewsscroller("scroller1", "400px", "370px", 7, "sample-database3.txt", "75%", "1em", "1em", "allbuttons");
+                                initialSetup = 1;
+                            }
+                        else
+                            {
+                                SBPnewsscroller("scroller1", "300px", "300px", 7, "sample-database3.txt", "75%", "1em", "0.75em", "allbuttons");
+                                initialSetup = 1;
+                            }
+                    }
+                else
+                    {
+                        if ($(window).width() > 900)
+                            {
+                                SBPresize("scroller1", "625px", "450px", "1.3em", "1em");
+                            }
+                        else if ($(window).width() > 600)
+                            {
+                                SBPresize("scroller1", "400px", "370px", "1em", "1em");
+                            }
+                        else
+                            {
+                                SBPresize("scroller1", "300px", "300px", "1em", "0.75em");
+                            }
+                    }
+            }
+
+    </script>
+
+    <div class="scroller1" style="margin: auto; right: 0; left: 0;">
+    <!--Include anything here for anyone who isn't running Javascript-->
+    </div>
+<hr>
+<table align="right" border="9" width="20%" bgcolor="#FFFFCC" bordercolor="white" cellpadding="6" cellspacing="3">
+	<tr>
+		<td width="15%">
+			<h3 align="center">Download SBP News Scroller</h3>
+			<p align="center"><a href="SBP-newscroller-1.12.zip">Version 1.12</a> (zip file)</p>
+			<hr>
+			<h3 align="center">Working Demos&nbsp;of <br>
+SBP News Scroller</h3>
+			<p align="center"><a href="basic-sample.html">Basic Scroller</a></p>
+			<p align="center"><a href="mutiple-scrollers-sample.html">Multiple Scrollers on One Page</a></p>
+			<p align="center"><a href="responsive-scrollers-sample.html">Responsive Scrollers</a><br>
+&nbsp;</p>
+		</td>
+	</tr>
+</table>
+<p>SBP News Scroller is a simple but highly customizable horizontal news/photo scroller that can be added to&nbsp;any webpage and viewed by any user running Javascript. It is written in Javascript and uses a simple tab-delimited database to reference&nbsp;news stories and photos. This database can easily be edited by someone&nbsp;without any technical skills or knowledge of HTML, CSS, or Javascript. Setting up the script on a webpage also requires little-to-no knowledge of HTML, CSS, or Javascript. Everything
+you need to set up and edit the basic scroller is simple and&nbsp;easy to understand, and adding and removing stories and photos to the SBP News Scroller is as simple as editing the database file in any text editing software (such as Notepad, Microsoft Word, etc.).</p>
+<h3>BASIC SETUP</h3>
+<p>To set up the SBP News Scroller, simply go to the directory on your website where you want to deploy it and create a new subdirectory on called &quot;SBP-news-scroller&quot; (without the quotes). New copy all the files from the SBP-news-scroller subdirectory&nbsp;in the SBP News Scroller zip file you downloaded into this new subdirectory. Then, whereever you want the scroller to appear in your webpage, insert this code:</p>
+<pre>        	&lt;!--News Scroller--&gt;</pre>
+<pre>            &lt;!--You can omit the next line if you already have jQuery on your page--&gt;</pre>
+<pre>            &lt;script type=&quot;text/javascript&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;</pre>
+<pre>            &lt;!--News Scroller--&gt;</pre>
+<pre>            &lt;script type=&quot;text/javascript&quot; src=&quot;SBP-news-scroller/SBPnewsscroller.js&quot;&gt;&lt;/script&gt;</pre>
+<pre>            &lt;script&gt;</pre>
+<pre>                    SBPnewsscroller(<span style="background-color:rgb(255,255,102);">&quot;scrollername&quot;, &quot;625px&quot;, &quot;450px&quot;, 7, &quot;sample-database3.txt&quot;, &quot;70%&quot;, &quot;1.5em&quot;, &quot;1em&quot;, &quot;ALLBUTTONS&quot;</span>);</pre>
+<pre>            &lt;/script&gt;</pre>
+<pre>    		&lt;div class=&quot;<span style="background-color:rgb(255,255,102);">scrollername</span>&quot; width=&quot;<span style="background-color:rgb(255,255,102);">625px</span>&quot; height=&quot;<span style="background-color:rgb(255,255,102);">450px</span>&quot;&gt;
+			&lt;!--Put anything here that you want people who aren't running Javascript to see--&gt;
+    		&lt;/div&gt;</pre>
+<p>The only parameters&nbsp;here that you need to change are the ones highlighted in yellow. Each paremeter, except the delay time, should be in quotes.</p>
+<table align="left" border="9" width="20%" bgcolor="#FFFFCC" bordercolor="white" cellpadding="6" cellspacing="3">
+	<tr>
+		<td width="15%">
+			<h3 align="center"><i>? ?<br>
+Why Can't I See My Scroller When I'm Editing My Page<br>
+? ?</i></h3>
+			<p align="center">Please note that when you're editing a page with a SBT News Scroller, you will probably only see a blank space where the scroller will be until you actually upload it to the server. This is a security precaution in HTML that prevents a Javascript program&nbsp;from accessing other files unless it's on a webserver (SBT News Scroller&nbsp;needs to access its separate database file). </p>
+			<p align="center">One work-around for this is to download a browser&nbsp;add-on&nbsp;like <a href="https://chrome.google.com/webstore/detail/web-server-for-chrome">Web
+Server for Chrome</a>, which lets you run your own little mini-webserver when editing and viewing&nbsp;html files offline.<br>
+&nbsp;</p>
+		</td>
+	</tr>
+</table>
+<p><b>Please note that each of these parameters&nbsp;must be specified. </b></p>
+<p>The first parameter is your scroller name (here it's &quot;scrollername&quot;). Each scroller on your page must have its own unique scroller name. It should match the class name of your div.</p>
+<p>The second parameter is the width of your scroller. It should&nbsp;match the width of your div. Here it's &quot;625px&quot;. This paremeter can take px or a %. For example, you could use &quot;200px&quot; or &quot;20%&quot;.</p>
+<p>The third&nbsp;parameter is the height&nbsp;of your scroller. It should&nbsp;match the height&nbsp;of your div. Here it's &quot;450px&quot;. This paremeter can take px or a %. For example, you could use &quot;200px&quot; or &quot;20%&quot;.</p>
+<p>The fourth parameter is the delay time (in seconds) that you want the scroller to wait before scrolling between items. Set this to 0 if you don't want it to automatically scroll. Here it's set to 7 seconds. This parameter is the only one that should not be in quotes.</p>
+<p>The fifth parameter is the name of your database. You will creat this database file in your&nbsp;SBP-news-scroller subdirectory. Here it's set to &quot;sample-database3.txt&quot;.</p>
+<p>The sixth&nbsp;parameter is the width of your images. You must include this paremeter even if you don't plan on using images in your scroller. This paremeter can take px or a %, but I strongly recommend using a percentage (to make your scroller more responsive). Here it's set to &quot;75%&quot;.</p>
+<p>The seventh&nbsp;parameter is the size of your news headline font. This can take px, pt, or em font sizes. Here it's set to &quot;1.5em&quot;. You can further cutomize your headline font by styling either the H3 element or the class &quot;.yourscrollernameh3Class&quot; in your CSS stylesheet (with your scroller name subsituted for yourscrollername)&nbsp;.</p>
+<p>The eighth&nbsp;parameter is the size of your news story details font. This can take px, pt, or em font sizes. Here it's set to &quot;1em&quot;. You can further cutomize your story details&nbsp;font by styling either the H4 element or the class &quot;.yourscrollernameh4Class&quot; in your CSS stylesheet (with your scroller name subsituted for yourscrollername)&nbsp;.</p>
+<p>The ninth and final&nbsp;parameter is for your button options. You have four&nbsp;options here (choose one): </p>
+<ul>
+	<li>&quot;ALLBUTTONS&quot; will show both the side scroller navigation buttons and bottom navigation buttons on you scroller. This is the default.</li>
+	<li>&quot;NOBOTTOMBUTTONS&quot; will show the side navigation buttons only.</li>
+	<li>&quot;NOSIDEBUTTONS&quot; will show the bottom navigation buttons only.</li>
+	<li>&quot;NOBUTTONS&quot; will not show any navigation buttons (the scroller will just scroll automatically, based on your specified delay time).</li>
+</ul>
+<h3><br>
+THE DATABASE</h3>
+<p>Setting up your database file is easy. Just create a simple txt file and save it in your SBP-news-scroller subdirectory. Each line in the database is a separate entry, with each of its five fields seperated by a tab (hitting the tab button on your keyboard). Here is a&nbsp;sample database, for example:</p>
+<p align="center"><img src="documentation-image1.jpg" border="0" width="90%"></p>
+<p>If you specifiy an image file you can either give a full URL to the file (i.e., &quot;http://photobucket.com/112422/mypic.jpg&quot; ) or just the file name. If you just give the file name, you need to make sure the image is saved in your SBP-news-scroller subdirectory.</p>
+<p>You can omit any of these fields on any given line, but all the tabs must still be included. For example, if you just wanted to show photos on your scroller, with no headlines, links or news stories, your database might look like this:</p>
+<p>[TAB][TAB][TAB]http://mysite.com/photo1.jpg[TAB]alt text for photo1<br>
+[TAB][TAB][TAB]http://mysite.com/photo2.jpg[TAB]alt text for photo2</p>
+<p>Or if you wanted to include text news stories only, with no photos, it might look like this:</p>
+<p>News Headline1[TAB]http://mysite.com/story1.html[TAB]News story 1 details[TAB][TAB]<br>
+News Headline2[TAB]http://mysite.com/story2.html[TAB]News story 2&nbsp;details[TAB][TAB]<br>
+News Headline3[TAB]http://mysite.com/story3.html[TAB]News story 3&nbsp;details[TAB][TAB]</p>
+<p>You could even mix it up if you like:</p>
+<p>News Headline1[TAB]http://mysite.com/story1.html[TAB]News story 1 details[TAB][TAB]<br>
+[TAB][TAB][TAB]http://mysite.com/photo1.jpg[TAB]alt text for photo1<br>
+News Headline2[TAB]http://mysite.com/story2.html[TAB]News story 2&nbsp;details[TAB][TAB]</p>
+<p>Just be careful not to put in too many tabs in your lines. Each line in your database&nbsp;should have four tabs.</p>
+<p>Whenever you change the database file, just re-upload it to your SBP-news-scroller subdirectory and any&nbsp;scroller(s)&nbsp;that use it will automatically update themselves.</p>
+<hr>
+<h3 align="center">And that's it! That's all you need to set up and maintain a basic SBP News Scroller!</h3>
+<h3 align="center">So, that was the &quot;simple&quot; part. But the script is also powerful. Here are some more advanced things you can do with SBP News Scroller.</h3>
+<hr>
+<h3>MULTIPLE SCROLLERS ON THE SAME PAGE</h3>
+<p>Running more than one scroller on the same page is easy with SBP News Scroller. You just have to remember to give each scroller its own unique scroller name and its own div. Each scroller can have its own unique parameters and use its own database (or share a database with another scroller). &nbsp;Here is an example of code that runs two scrollers on the same page. Note that you only need to include the script call on you page once (before the first script):</p>
+<p>For where you want the first scroller:</p>
+<pre>        	&lt;!--News Scroller--&gt;</pre>
+<pre>            &lt;!--You can omit the next line if you already have jQuery on your page--&gt;
+            &lt;script type=&quot;text/javascript&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;</pre>
+<pre>            &lt;script type=&quot;text/javascript&quot; src=&quot;SBP-news-scroller/SBPnewsscroller.js&quot;&gt;&lt;/script&gt;</pre>
+<pre>            &lt;script&gt;
+                    SBPnewsscroller(<span style="background-color:rgb(255,255,102);">&quot;scrollername&quot;, &quot;625px&quot;, &quot;450px&quot;, 7, &quot;sample-database3.txt&quot;, &quot;70%&quot;, &quot;1.5em&quot;, &quot;1em&quot;, &quot;ALLBUTTONS&quot;</span>);
+            &lt;/script&gt;</pre>
+<pre>    		&lt;div class=&quot;<span style="background-color:rgb(255,255,102);">scrollername</span>&quot; width=&quot;<span style="background-color:rgb(255,255,102);">625px</span>&quot; height=&quot;<span style="background-color:rgb(255,255,102);">450px</span>&quot;&gt;
+			&lt;!--Put anything here that you want people who aren't running Javascript to see--&gt;
+    		&lt;/div&gt;						</pre>
+<p>For where you want the second, third, etc. scrollers:</p>
+<pre>            &lt;script&gt;
+                    SBPnewsscroller(<span style="background-color:rgb(255,255,102);">&quot;scrollername2&quot;, &quot;225px&quot;, &quot;350px&quot;, 4, &quot;sample-database2.txt&quot;, &quot;80%&quot;, &quot;1.5em&quot;, &quot;1em&quot;, &quot;NOBUTTONS&quot;</span>);
+            &lt;/script&gt;
+    		&lt;div class=&quot;<span style="background-color:rgb(255,255,102);">scrollername2</span>&quot; width=&quot;<span style="background-color:rgb(255,255,102);">225px</span>&quot; height=&quot;<span style="background-color:rgb(255,255,102);">350px</span>&quot;&gt;
+			&lt;!--Put anything here that you want people who aren't running Javascript to see--&gt;
+    		&lt;/div&gt;
+ 			 			</pre>
+<h3>RESPONSIVE SBP SCROLLERS (THAT RESIZE THEMSELVES FOR MOBILE DEVICES)</h3>
+<p>Modern &quot;responsive&quot; design (so webpages and elements&nbsp;scale automatically depending on the device they're being viewed on) is a very important part of modern web design. To that end, SBP News Scroller has a resize function that can be called when your webpage is resized&nbsp;(such as on a cellphone switching from portrait to landscape mode). This allows you to set &quot;breakpoints&quot; at certain minimum widths that will scale down (or up) the size of your scroller and its font sizes.&nbsp;</p>
+<p>The SBP resize function is called like this:</p>
+<pre>	SBPresize(<span style="background-color:rgb(255,255,102);">&quot;scroller1&quot;, &quot;500px&quot;, &quot;350px&quot;, &quot;2em&quot;, &quot;0.9em&quot;</span>);
+</pre>
+<p>The first parameter is your existing scroller name. The second is the new width you want to resize that scroller to. The third is the new height you want to resize to. The fourth is the new size for your news headline font. And the fifth parameter is the new size for your news story details font.</p>
+<p>To actually use this call to include&nbsp;breakpoints on your page, first you need to include the following parmeters in your body tag:</p>
+<pre> 	&lt;body onload=&quot;SBPresponsive()&quot; onresize=&quot;SBPresponsive()&quot;&gt;</pre>
+<p>Now, if you wanted to set breakpoints at 600px and 900px screen-width, with a default for less than 600px screen-width, here is the code you would use on your page (widths highlighted):</p>
+<pre> &nbsp; &nbsp;&lt;!--News Scroller--&gt;
+ &nbsp;&nbsp;&nbsp;&lt;!--You can omit the next line if you already have jQuery on your page--&gt;
+ &nbsp;&nbsp;&nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;text/javascript&quot; src=&quot;SBP-news-scroller/SBPnewsscroller.js&quot;&gt;&lt;/script&gt;</pre>
+<pre>    &lt;script&gt;
+        var initialSetup = 0;
+        function SBPresponsive()
+            {
+                if (initialSetup === 0)
+			//these are the initial setup calls, adjusted by different screen widths
+                    {
+                        if ($(window).width() &gt; <span style="background-color:rgb(255,255,102);">900</span>)
+                            {
+                                SBPnewsscroller(&quot;scroller1&quot;, &quot;800px&quot;, &quot;450px&quot;, 7, &quot;sample-database.txt&quot;, &quot;75%&quot;, &quot;2em&quot;, &quot;1em&quot;, &quot;ALLBUTTONS&quot;);
+                                SBPnewsscroller(&quot;scroller2&quot;, &quot;400px&quot;, &quot;350px&quot;, 5, &quot;sample-database2.txt&quot;, &quot;75%&quot;, &quot;2em&quot;, &quot;1em&quot;, &quot;NOBUTTONS&quot;);
+                                initialSetup = 1;
+                            }</pre>
+<pre>                        else if ($(window).width() &gt; <span style="background-color:rgb(255,255,102);">600</span>)
+                            {
+                                SBPnewsscroller(&quot;scroller1&quot;, &quot;500px&quot;, &quot;350px&quot;, 7, &quot;sample-database.txt&quot;, &quot;75%&quot;, &quot;2em&quot;, &quot;0.9em&quot;, &quot;ALLBUTTONS&quot;);
+                                SBPnewsscroller(&quot;scroller2&quot;, &quot;400px&quot;, &quot;300px&quot;, 5, &quot;sample-database2.txt&quot;, &quot;75%&quot;, &quot;2em&quot;, &quot;0.9em&quot;, &quot;NOBUTTONS&quot;);
+                                initialSetup = 1;
+                            }
+                        else
+                            {
+                                SBPnewsscroller(&quot;scroller1&quot;, &quot;300px&quot;, &quot;300px&quot;, 7, &quot;sample-database.txt&quot;, &quot;75%&quot;, &quot;1em&quot;, &quot;0.9em&quot;, &quot;ALLBUTTONS&quot;);
+                                SBPnewsscroller(&quot;scroller2&quot;, &quot;300px&quot;, &quot;300px&quot;, 5, &quot;sample-database2.txt&quot;, &quot;75%&quot;, &quot;1em&quot;, &quot;0.9em&quot;, &quot;NOBUTTONS&quot;);
+                                initialSetup = 1;
+                            }
+                    }
+		   //these are resize function calls made if a user's screen is resized:
+                else
+                    {
+                        if ($(window).width() &gt; <span style="background-color:rgb(255,255,102);">900</span>)
+                            {
+                                SBPresize(&quot;scroller1&quot;, &quot;800px&quot;, &quot;450px&quot;, &quot;2em&quot;, &quot;1em&quot;);
+                                SBPresize(&quot;scroller2&quot;, &quot;400px&quot;, &quot;350px&quot;, &quot;2em&quot;, &quot;1em&quot;);
+                            }</pre>
+<pre>                        else if ($(window).width() &gt; <span style="background-color:rgb(255,255,102);">600</span>)</pre>
+<pre>                            {
+                                SBPresize(&quot;scroller1&quot;, &quot;500px&quot;, &quot;350px&quot;, &quot;2em&quot;, &quot;0.9em&quot;);
+                                SBPresize(&quot;scroller2&quot;, &quot;400px&quot;, &quot;300px&quot;, &quot;2em&quot;, &quot;0.9em&quot;);
+                            }
+                        else
+                            {
+                                SBPresize(&quot;scroller1&quot;, &quot;300px&quot;, &quot;300px&quot;, &quot;1em&quot;, &quot;0.9em&quot;);
+                                SBPresize(&quot;scroller2&quot;, &quot;300px&quot;, &quot;300px&quot;, &quot;1em&quot;, &quot;0.9em&quot;);
+                            }
+                    }
+            }
+    &lt;/script&gt;</pre>
+<pre>    &lt;div class=&quot;scroller1&quot;&gt;
+	&lt;!--Put anything here that you want people who aren't running Javascript to see--&gt;
+    &lt;/div&gt;		</pre>
+<pre>    &lt;div class=&quot;scroller2&quot;&gt;
+	&lt;!--Put anything here that you want people who aren't running Javascript to see--&gt;
+    &lt;/div&gt;		</pre>
+<h3>CUSTOMIZE THE LEFT AND RIGHT NAVIGATION BUTTONS</h3>
+<p>If you would like to edit the image files for the left and right navigation buttons, you can find them in your SBP-news-scroller subdirectory, named button1.png (for the right button) and button2.png (for the left button).</p>
+<h3>QUESTIONS AND COMMENTS</h3>
+<p>If you have any questions, comments, corrections, bug reports, or suggestions please email me&nbsp;at eric@pallmorsoft.com. I'm also interested in seeing any implementations of the scroller you may have, so send me those too if you don't mind. I'm always impressed by the creative things people can do with my basic scripts. So I look forward to hearing what YOU made happen with SBP News Scroller.</p>
+<p>&nbsp;</p>
+</body>
+
+</html>

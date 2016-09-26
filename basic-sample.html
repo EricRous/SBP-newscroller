@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Eric Rousey Basic SBP News Scroller demo</title>
+
+        <link rel="stylesheet" href="basic.css">
+
+    </head>
+
+  <body>
+
+    <!--News Scroller-->
+    <!--You can omit the next line if you already have jQuery on your page-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--You only need the next line if you want to include a local copy of jQuery-->
+    <script type="text/javascript" src="SBP-news-scroller/jquery-1.12.4.min.js"></script>
+    <!--News Scroller-->
+    <script type="text/javascript" src="SBP-news-scroller/SBPnewsscroller.js"></script>
+    <script>
+        SBPnewsscroller("scroller1", "625px", "450px", 7, "sample-database3.txt", "75%", "1.3em", "1em", "allbuttons");
+    </script>
+
+    <div class="scroller1">
+        <!--Include anything here for anyone who isn't running Javascript-->
+    </div>
+
+  </body>
+</html>
+
+

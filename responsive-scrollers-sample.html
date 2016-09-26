@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Eric Rousey News Scroller Demo</title>
+
+        <!--W3 stylesheet-->
+        <link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet">
+
+        <!--JQuery-->
+	<script type="text/javascript" src="SBP-news-scroller/jquery-1.12.4.min.js"></script>
+
+    </head>
+
+  <body class="container-center" onload="SBTresponsive()" onresize="SBTresponsive()">
+
+    <!--News Scroller-->
+    <script type="text/javascript" src="SBP-news-scroller/SBPnewsscroller.js"></script>
+    <script>
+        var initialSetup = 0;
+        function SBTresponsive()
+            {
+                if (initialSetup === 0)
+                    {
+                        if ($(window).width() > 900)
+                            {
+                                SBPnewsscroller("scroller1", "800px", "450px", 7, "sample-database.txt", "75%", "2em", "1em");
+                                SBPnewsscroller("scroller2", "400px", "350px", 5, "sample-database2.txt", "75%", "2em", "1em", "NOBUTTONS");
+                                initialSetup = 1;
+                            }
+                        else if ($(window).width() > 600)
+                            {
+                                SBPnewsscroller("scroller1", "500px", "350px", 7, "sample-database.txt", "75%", "2em", "0.9em");
+                                SBPnewsscroller("scroller2", "400px", "300px", 5, "sample-database2.txt", "75%", "2em", "0.9em", "NOBUTTONS");
+                                initialSetup = 1;
+                            }
+                        else
+                            {
+                                SBPnewsscroller("scroller1", "300px", "300px", 7, "sample-database.txt", "75%", "1em", "0.9em");
+                                SBPnewsscroller("scroller2", "300px", "300px", 5, "sample-database2.txt", "75%", "1em", "0.9em", "NOBUTTONS");
+                                initialSetup = 1;
+                            }
+                    }
+                else
+                    {
+                        if ($(window).width() > 900)
+                            {
+                                SBPresize("scroller1", "800px", "450px", "2em", "1em");
+                                SBPresize("scroller2", "400px", "350px", "2em", "1em");
+                            }
+                        else if ($(window).width() > 600)
+                            {
+                                SBPresize("scroller1", "500px", "350px", "2em", "0.9em");
+                                SBPresize("scroller2", "400px", "300px", "2em", "0.9em");
+                            }
+                        else
+                            {
+                                SBPresize("scroller1", "300px", "300px", "1em", "0.9em");
+                                SBPresize("scroller2", "300px", "300px", "1em", "0.9em");
+                            }
+                    }
+            }
+
+    </script>
+
+    <div class="scroller1">
+    </div>
+
+
+    <div class="scroller2">
+    </div>
+
+  </body>
+</html>
+
+
