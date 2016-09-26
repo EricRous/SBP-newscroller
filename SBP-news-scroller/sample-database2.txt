@@ -1,0 +1,2 @@
+The Young Developer's Guide to Debugging JavaScript	http://open.blogs.nytimes.com/2013/08/27/the-young-developers-guide-to-debugging-javascript/	A New York Times intern offers advice on working with Javascript	javascript.png	Javascript logo	database.txt
+News Headline 4	http://www.palmorsoft.com	This is the text for the fourth news story	javascript.png	alt text 2	database.txt
