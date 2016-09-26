@@ -4,3 +4,5 @@ An easy-to-use Javascript horizontal news scroller that's simple for anyone to d
 For full documentation, please see documentation.html 
 
 This application is licensed for personal and professional use. You may modify or use the code as you wish, but modifications must include attribution of the original creation.
+
+Please visit the SBP News Scroller webpage at http://www.pallmorsoft.com/SBP-newscroller/documentation.html
